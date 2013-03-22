@@ -8,7 +8,10 @@
   </div>
 
   <div id="main-pane">
-    {{> todos}}
+    {{> banner}}
+    {{> landing}}
+    {{> whoweare}}
+    {{>footer}}
   </div>
 
 </body>
@@ -16,16 +19,21 @@
 
 
 <template name="navbar">
-  <div id="navbar">
-    <div class="row" style="margin-top:15px;">
+  <div class="topbar">
+  <div class="row" style="margin-top:15px;">
       <div class="five columns" id="headerlinks">
-        <div class="title">THE VANNEVAR GROUP</div>
+        <a href="/" id="vannevarnavbar" style="font-size:14px;">THE VANNEVAR GROUP</a>
       </div>
-      <div class="seven columns" id="headerlinks" style="float:right;">
+      <div class="seven columns" id="headerlinks">
+        <div id="vannevarnavbar" style="float:right;">
+        <!-- <a href="/whoweare" style="margin-left:15px;">WHO WE ARE</a> -->
         <a href="/contact" style="margin-left:15px;">CONTACT</a>
+        </div>
       </div>
-    </div>
+
+    <br>
   </div>
+</div>
 </template>
 
 <template name="todos">
@@ -78,6 +86,317 @@
       {{/if}}
     </div>
   </li>
+</template>
+
+
+
+
+
+
+<!-- banner -->
+<template name="banner">
+  <div style="background: -webkit-linear-gradient(45deg, #000000 0%,#0f0f0f 100%);">
+    <div class="hero-unit">
+      <div class="hero-overlay">
+        <div class="row" style="padding-top:10px;">
+          <div class="six columns bannerbg">
+            <p style="color:#fffff3; font-family: 'GillSans', 'Gill Sans', 'Trebuchet MS', sans-serif;font-size:40px;">ACCELERATING SCIENTIFIC PROGRESS</p>
+              <p style="color:#e6e6e6;font-size:16px;">The Vannevar Group is a team of scientists who want to know: what drives scientific progress, and how can we improve scientific institutions to create the greatest amount of social good? We interview leading researchers to identify high-value projects, then work with scientists, philanthropists, and businesses to bring these projects to fruition. In addition to launching projects, we publish papers that provide a high-level view of the state of academia and its various subfields, guided by reports from our current set of <a style="color:#8899bb;"href=/groups.html>working groups</a>.</p>
+            </div>
+          <div class="six columns"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<!-- Landing Page Section -->
+
+<template name="landing">
+<div class="row">
+  <div class="twelve columns">
+    <div class="row">
+ 
+      <div class="services">
+        <div class="four columns">
+          <h5 style="color:#262626;font-size:20px;">Meta-Research</h5>
+          <p style="font-size:1.5rem;">Academia is perhaps the most successful institution to date for creating intellectual progress, but we can still attempt to understand and improve upon it. One of our core projects is to investigate the scientific process itself and to make scientific institutions more efficient. </p>
+        </div>
+        <div class="four columns">
+          <h5 style="color:#262626;font-size:20px;">Funding Revolutionary Science</h5>
+          <p style="font-size:1.5rem;">The best science is often harder to find funding for than more incremental work. We hope to reverse this trend by connecting excellent projects with non-traditional funders like entrepreneurs and private philanthropists. </p>
+        </div>
+        <div class="four columns">
+          <h5 style="color:#262626;font-size:20px;">Science and Society</h5>
+          <p style="font-size:1.5rem;">Vannevar is particularly interested in science that will benefit society, both in the near-term and the long run. We hope to do this by elucidating the connection between science, technology, and society, as well as by identifying scientific projects with high social value. </p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+</template>
+
+
+
+
+<!-- Who We Are Section -->
+<template name="whoweare">
+  <div class="row onepage" style="min-height: 600px;" id="aboutus">
+        <br>
+
+        <h1>Who we are</h1>
+        <p style="font-size:20px;color:#585958;font-family: 'GillSans', 'Gill Sans', 'Trebuchet MS', sans-serif;">Vannevar is based at Stanford University but welcomes members from across the globe. We currently have members from Stanford University, Johns Hopkins, UC Berkeley, and Yale. Below you can find out about our current members.</p>
+
+        <hr>
+      <div class="content">
+
+        <div class="row" style="border-bottom: 2px dotted #e5e5e5;">
+          <div class="ten columns">
+            
+<br>
+<div class="row">
+  <div class="four columns">
+    <div class="main img" style="float:right;"><img alt="Amodei" src="/images/members/amodei.jpg"></div>
+  </div>
+
+  <div class="eight columns">
+    <h5>Dario Amodei</h5>
+    <p id="member">PROTEOMICS, SYSTEMS BIOLOGY</p>
+    <p id="memberbio">Dario Amodei is a postdoctoral scholar at Stanford Medical School, where he focuses on quantitative proteomics with applications to clinical biomarker discovery.  He received his PhD in biophysics from Princeton University in 2011 with the support of Hertz and NDSEG fellowships, and was recently the recipient of the Hertz Foundation doctoral thesis prize. He is broadly interested in using mathematical models of biological systems to improve our understanding of human health and disease.</p>
+  </div>
+</div>
+<br>
+
+          </div>
+          <div class="two columns">
+          </div>
+        </div>
+
+        <div class="row" style="border-bottom: 2px dotted #e5e5e5;">
+          <div class="ten columns">
+            
+
+<br>
+<div class="row">
+  <div class="four columns">
+    <div class="main img" style="float:right;"><img alt="Steinhardt" src="/images/members/steinhardt.jpeg"></div>
+  </div>
+
+  <div class="eight columns">
+    <h5>Jacob Steinhardt</h5>
+    <p id="member">ARTIFICIAL INTELLIGENCE, MACHINE LEARNING</p>
+    <p>Jacob is a graduate student in the Department of Computer Science at Stanford, working on artificial intelligence and natural language processing. He is particularly interested in using machine learning to solve high-dimensional search problems. He received his Bachelor's in mathematics from MIT and is currently supported by a Hertz fellowship and NSF fellowship.</p>
+  </div>
+</div>
+<br>
+          </div>
+          <div class="two columns">
+          </div>
+        </div>
+
+        <div class="row" style="border-bottom: 2px dotted #e5e5e5;">
+          <div class="ten columns">
+            
+
+<br>
+<div class="row">
+  <div class="four columns">
+    <div class="main img" style="float:right;"><img alt="Kaplan" src="/images/members/kaplan.jpg"></div>
+  </div>
+
+  <div class="eight columns">
+    <h5>Jared Kaplan</h5>
+    <p id="member">PHYSICS</p>
+    <p>Jared Kaplan is an assistant professor in the Department of Physics &amp; Astronomy at Johns Hopkins University.  He received his Ph.D. from Harvard University in 2009 with the support of a Hertz Foundation fellowship, and from 2009-2013 he worked as a research associate at SLAC and Stanford University.  He has broad interests in theoretical physics, with a focus on high-energy physics and cosmology.</p>
+  </div>
+</div>
+<br>
+          </div>
+          <div class="two columns">
+          </div>
+        </div>
+
+
+        <div class="row" style="border-bottom: 2px dotted #e5e5e5;">
+          <div class="ten columns">
+            
+
+<br>
+<div class="row">
+  <div class="four columns">
+    <div class="main img" style="float:right;"><img alt="Wang" src="/images/members/wang.jpg"></div>
+  </div>
+
+  <div class="eight columns">
+    <h5>Jade Wang</h5>    
+    <p id="member">NEUROSCIENCE</p>
+    <p>Jade Wang is Chief Culture Officer at Meteor, an open source web app development platform. She also founded the Chez JJ hacker house collective, and is a mentor for the Thiel 20 Under 20 Fellowship program. As a post doc at NASA Ames Research Center, she researched human factors and usability in aviation. Her neuroscience Ph.D. work at Northwestern, supported by a National Research Service Award Fellowship from the NIH, focused on EEG plasticity in the auditory cortex and the brainstem.</p>
+  </div>
+</div>
+<br>
+          </div>
+          <div class="two columns">
+          </div>
+        </div>
+
+
+        <div class="row" style="border-bottom: 2px dotted #e5e5e5;">
+          <div class="ten columns">
+            
+
+<br>
+<div class="row">
+  <div class="four columns">
+    <div class="main img" style="float:right;"><img alt="Conley" src="/images/members/conley.jpg"></div>
+  </div>
+
+  <div class="eight columns">
+    <h5>Nick Conley</h5>
+    <p id="member">CHEMISTRY, DEVELOPMENTAL BIOLOGY</p>
+    <p>Nick Conley holds a PhD in Chemistry from Stanford University and has completed three years of post-doctoral research in Developmental Biology within the Stanford School of Medicine. He is currently a Principal Research Engineer at HGST, where he applies synthetic organic chemistry to the development of next generation hard disk drive technologies for high-density data storage. He is CTO at LMA Solutions Inc, which develops and licenses innovative consumer dental cleaning products, and is CSO of Create Cosmetics LLC, the world’s first crowdsourced cosmetics company.</p>
+  </div>
+</div>
+<br>
+          </div>
+          <div class="two columns">
+          </div>
+        </div>
+
+
+        <div class="row" style="border-bottom: 2px dotted #e5e5e5;">
+          <div class="ten columns">
+            
+<br>
+<div class="row">
+  <div class="four columns">
+    <div class="main img" style="float:right;"><img alt="Donner" src="/images/members/donner.jpg"></div>
+  </div>
+
+  <div class="eight columns">
+    <h5>Yoni Donner</h5>
+    <p id="member">ARTIFICIAL INTELLIGENCE, MACHINE LEARNING</p>
+    <p>Yoni is a 3rd-year PhD student in the Computer Science department at Stanford. His background is in probabilistic graphical models, machine learning and Bayesian statistics, and he is interested in applying these tools to aging research, particularly age-related cognitive decline. He recently designed a tool called Quantified Mind (www.quantified-mind.com) to enable efficient repeatable measurement of basic measures of cognitive performance.</p>
+  </div>
+</div>
+<br>
+
+          </div>
+          <div class="two columns">
+          </div>
+        </div>
+
+          <div class="row" style="border-bottom: 2px dotted #e5e5e5;">
+          <div class="ten columns">
+            
+
+<br>
+<div class="row">
+  <div class="four columns">
+    <div class="main img" style="float:right;"><img alt="Constantin" src="/images/members/constantin.jpg"></div>
+  </div>
+
+  <div class="eight columns">
+    <h5>Sarah Constantin</h5>
+    <p id="member">MATHEMATICS</p>
+    <p>Sarah Constantin is a PhD student in mathematics at Yale University.  Her research focuses on applied harmonic analysis.  She earned her BA from Princeton in 2010, and is an NSF and DOD fellow. </p>
+  </div>
+</div>
+<br>
+</div>
+          <div class="two columns">
+          </div>
+        </div>
+
+        <div class="row" style="border-bottom: 2px dotted #e5e5e5;">
+          <div class="ten columns">
+            <br>
+<div class="row">
+  <div class="four columns">
+    <div class="main img" style="float:right;"><img alt="Looks" src="/images/members/looks.png"></div>
+  </div>
+
+  <div class="eight columns">
+    <h5>Moshe Looks</h5>
+    <p id="member">ARTIFICIAL INTELLIGENCE, MACHINE LEARNING</p>
+    <p>Moshe Looks has a Ph.D. and M.S. from Washington University and a B.Sc. from Hebrew University. He works at Google Research on probabilistic approaches to learning programs, and artificial intelligence.</p>
+  </div>
+</div>
+<br>
+
+          </div>
+          <div class="two columns">
+          </div>
+        </div>
+
+
+        <div class="row" style="border-bottom: 2px dotted #e5e5e5;">
+          <div class="ten columns">
+            <br>
+<div class="row">
+  <div class="four columns">
+    <div class="main img" style="float:right;"><img alt="Fortney" src="/images/members/fortney.png"></div>
+  </div>
+
+  <div class="eight columns">
+    <h5>Kristen Fortney </h5>
+    <p id="member">BIOINFORMATICS, GENETICS</p>
+    <p>Kristen Fortney is a Postdoctoral Fellow at Stanford University, where she works on the genetics of human aging. She completed a PhD in Bioinformatics at the University of Toronto in 2012. Her research interests lie in applying tools from computational biology to problems in translational medicine, with a focus on aging and age-related disease.</p>
+  </div>
+</div>
+<br>
+
+
+
+          </div>
+          <div class="two columns">
+          </div>
+        </div>
+
+        <div class="row" style="border-bottom: 2px dotted #fff;">
+          <div class="ten columns">
+            
+<br>
+<div class="row">
+  <div class="four columns">
+    <div class="main img" style="float:right;"><img alt="Mallick" src="/images/members/mallick.jpeg"></div>
+  </div>
+
+  <div class="eight columns">
+    <h5>Parag Mallick</h5>
+    <p id="member">PROTEOMICS, SYSTEMS BIOLOGY</p>
+    <p id="memberbio">Parag Mallick graduated from Washington University in St. Louis with a BS in Computer Science. He then obtained his Ph.D. from UCLA in Chemistry &amp; Biochemistry, where he worked with Dr. David Eisenberg. At UCLA he received both an NSF IGERT Fellowship and an NSF Biotechnology fellowship. He completed Post-Doctoral studies at The Institute for Systems Biology, in Seattle, WA with Dr. Ruedi Aebersold. He is now faculty with the Canary Center for Cancer Early Detection at Stanford University where he is developing quantitative multi-scale approaches to accurately describe cellular regulation and dysregulation and to better prioritize potential biomarker candidates. </p>
+  </div>
+</div>
+<br>
+
+          </div>
+          <div class="two columns">
+          </div>
+        </div>
+
+
+
+
+        
+    
+    </div>
+  </div>
+</template>
+
+
+<template name="footer">
+<br>
+    <footer class="row">
+      <div class="twelve columns">
+        <div class="row">
+          <hr>
+          <a href="/" id="vannevarnavbar" style="color:#22235E">THE VANNEVAR GROUP</a><br>
+          <p style="color:#333;padding-top:5px;">© 2013 The VANNEVAR GROUP All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
 </template>
 
 
