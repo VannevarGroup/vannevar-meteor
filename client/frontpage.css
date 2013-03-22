@@ -60,8 +60,8 @@
     sup {vertical-align: super;}
     
     body { 
-    background: #fafafa url(/images/gridtile.png);
-    /*background: #22235E url(/public/bg-noise.png);*/
+    /*background: #fafafa;*/
+    background: #fafafa url(/public/bg-noise.png);
     font-family:"ProximaNova",Helvetica,Arial,sans-serif;
     src:url(/public/ProximaNova-Reg-webfont.woff) format('woff'),
     url(/public/ProximaNova-bold.woff) format('woff'),
@@ -94,6 +94,7 @@
 .bannerbg {
   background: url(/images/transperantPNG.png); 
   padding: 15px;
+  min-height: 400px;
 }
 .hero-overlay {
   background: url(/images/texture123.png) 100% rgba(47,53,62,0.2);
@@ -103,14 +104,15 @@
 .hero-unit {
   /*padding: 20px;*/
   width:100%;
-  height: 430px;
+  height: 380px;
   margin-bottom: 20px;
   /*margin-top: 10px;*/
   font-size: 18px;
   font-weight: 200;
   line-height: 30px;
   color: inherit;
-  background: url(/images/vannevarfront2.jpg)top no-repeat;
+  /*background: url(/images/vannevarfront2.jpg)top no-repeat;*/
+  background: url(/images/stemcell.jpg)center;
   border-bottom: 5px solid #eaeaf7;
 }
 
@@ -2543,7 +2545,7 @@ div.dashcard {
     border-top: 7px solid #8899bb;
 /*  border-top: 6px solid #fafafa;
   border-bottom: 7px solid #cdcded;*/
-  background: #fafafa url(/images/gridtile.png);
+  background: #fafafa;
   padding-top: 0px;
   padding-right: 15px;
   padding-bottom: 15px;
@@ -2555,7 +2557,7 @@ div.dashcard {
 }
 
 div.onepage {
-  background: #fafafa url(/images/gridtile.png);
+  background: #fafafa;
   padding-top: 0px;
 }
 
