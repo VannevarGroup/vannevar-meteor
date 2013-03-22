@@ -60,8 +60,7 @@
     sup {vertical-align: super;}
     
     body { 
-    /*background: #fafafa;*/
-    background: #fafafa url(/public/bg-noise.png);
+    background: #fafafa;
     font-family:"ProximaNova",Helvetica,Arial,sans-serif;
     src:url(/public/ProximaNova-Reg-webfont.woff) format('woff'),
     url(/public/ProximaNova-bold.woff) format('woff'),
