@@ -28,6 +28,7 @@
         border: 0;
         font: inherit;
         vertical-align: baseline;
+
     }
     html {
         font-size: 62.5%; 
@@ -2558,6 +2559,9 @@ div.dashcard {
 div.onepage {
   background: #fafafa;
   padding-top: 0px;
+  font-size: 16px;
+  color:#6b6c6b;
+  font-family: "GillSans", "Gill Sans", "Trebuchet MS", sans-serif;
 }
 
 div.first {
@@ -2568,8 +2572,9 @@ div.first {
   font-size: 11px;
   color:#6b6c6b;
   margin-bottom: 0px;
-  font-family: 'GillSans', 'Gill Sans', 'Trebuchet MS', sans-serif;
+  font-family: "GillSans", "Gill Sans", "Trebuchet MS", sans-serif;
 }
+
 
 .memberbio p {
   font-size:15px;
