@@ -3,15 +3,23 @@
 </head>
 
 <body>
-  <div id="top-pane">
-    {{> navbar}}
-  </div>
+</body>
 
-  <div id="main-pane">
+<template name="layout">
+  <div id="top-pane">{{> navbar}}</div>
+   {{{yield}}}
+  <div id="bottom-pane">{{>footer}}</div>
+</template>
+
+
+  
+
+  <template name="Index">
     {{> banner}}
-    {{> whoweare}}
-    
-    <!-- Members -->
+      
+      {{> whoweare}}
+
+      <!-- Members -->
       {{> darioamodei}}
       {{> jacobsteinhardt}}
       {{> jadewang}}
@@ -23,15 +31,13 @@
       {{> moshelooks}}
       {{> paragmallick}}
     <!--  END Members-->
-
-    
-  </div>
-  {{>footer}}
-
-</body>
+    </tbody>
+  </table>
+</template>
 
 
 
+<!-- Navbar -->
 <template name="navbar">
   <div class="topbar">
   <div class="row" style="margin-top:15px;">
@@ -41,7 +47,7 @@
       <div class="seven columns" id="headerlinks">
         <div id="vannevarnavbar" style="float:right;">
         <!-- <a href="/whoweare" style="margin-left:15px;">WHO WE ARE</a> -->
-        <a href="/contact" style="margin-left:15px;">CONTACT</a>
+        <a href="{{contactPath}}">CONTACT</a>
         </div>
       </div>
 
@@ -49,28 +55,6 @@
   </div>
 </div>
 </template>
-
-<template name="todos">
-  {{#if any_list_selected}}
-    <div id="items-view">
-      {{#if loading}}
-        Loading...
-      {{else}}
-        <div id="new-todo-box">
-          <input type="text" id="new-todo" placeholder="New item" />
-        </div>
-        <ul id="item-list">
-          {{#each todos}}
-            {{> todo_item}}
-          {{/each}}
-        </ul>
-      {{/if}}
-    </div>
-  {{/if}}
-</template>
-
-
-
 
 
 
@@ -91,6 +75,11 @@
     </div>
   </div>
 </template>
+
+
+
+
+
 
 <!-- Landing Page Section -->
 
@@ -407,7 +396,12 @@
 
 
 
-
+<template name="contact">
+  <div class="row" style="min-height: 600px;padding-top:10px;">
+    <h1>Contact Us</h1>
+    <hr>
+  </div>
+</template>
 
 
 
@@ -432,6 +426,7 @@
       </div>
     </footer>
 </template>
+
 
 
 
