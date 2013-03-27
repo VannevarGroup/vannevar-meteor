@@ -9,8 +9,22 @@
 
   <div id="main-pane">
     {{> banner}}
-    
     {{> whoweare}}
+    
+    <!-- Members -->
+      {{> darioamodei}}
+      {{> jacobsteinhardt}}
+      {{> jadewang}}
+      {{> jaredkaplan}}
+      {{> kristenfortney}}
+      {{> nickconley}}
+      {{> yonidonner}}
+      {{> sarahconstantin}}
+      {{> moshelooks}}
+      {{> paragmallick}}
+    <!--  END Members-->
+
+    
   </div>
   {{>footer}}
 
@@ -55,38 +69,6 @@
   {{/if}}
 </template>
 
-<template name="todo_item">
-  <li class="todo {{done_class}}">
-    {{#if editing}}
-      <div class="edit">
-        <input id="todo-input" type="text" value="{{text}}" />
-      </div>
-    {{else}}
-      <div class="destroy"></div>
-      <div class="display">
-        <input class="check" name="markdone" type="checkbox" {{{done_checkbox}}} />
-        <div class="todo-text">{{text}}</div>
-      </div>
-    {{/if}}
-    <div class="item-tags">
-      {{#each tag_objs}}
-        <div class="tag removable_tag">
-          <div class="name">{{tag}}</div>
-          <div class="remove"></div>
-        </div>
-      {{/each}}
-      {{#if adding_tag}}
-        <div class="tag edittag">
-          <input type="text" id="edittag-input" value="" />
-        </div>
-      {{else}}
-        <div class="tag addtag">
-          +tag
-        </div>
-      {{/if}}
-    </div>
-  </li>
-</template>
 
 
 
@@ -143,243 +125,294 @@
 
 <!-- Who We Are Section -->
 <template name="whoweare">
-  <div class="row onepage" style="min-height: 600px;" id="aboutus">
+  <div class="row onepage" style="min-height: 300px;" id="aboutus">
         <br>
 
-        <h1>Our Mission</h1>
+        <h2>Our Mission</h2>
         <p style="font-size:20px;color:#585958;font-family: 'GillSans', 'Gill Sans', 'Trebuchet MS', sans-serif;">Vannevar is a group of scientists dedicated to making scientific research more efficient, collaborative and productive. It was founded by academics who noticed that they were facing constraints for sharing their own data, funding shortages for optimizing their use of software and other technology, and other obstacles to maximizing their contributions to scientific progress. We are a new organization, and are currently in an exploratory mode: getting broad feedback from people in the scientific community on the areas where small changes in institutions and funding mechanisms could make big differences. The Vannevar Group is based at Stanford University but welcomes members from across the globe. We currently have members from Stanford University, Johns Hopkins, UC Berkeley, and Yale. Below you can find out about our current members.</p>
 
-        <hr>
-      <div class="content">
-
-        <div class="row" style="border-bottom: 2px dotted #e5e5e5;">
-          <div class="ten columns">
-            
-<br>
-<div class="row">
-  <div class="four columns">
-    <div class="main img" style="float:right;"><img alt="Amodei" src="/images/members/amodei.jpg"></div>
-  </div>
-
-  <div class="eight columns">
-    <h5>Dario Amodei</h5>
-    <p id="member">PROTEOMICS, SYSTEMS BIOLOGY</p>
-    <p id="memberbio">Dario Amodei is a postdoctoral scholar at Stanford Medical School, where he focuses on quantitative proteomics with applications to clinical biomarker discovery.  He received his PhD in biophysics from Princeton University in 2011 with the support of Hertz and NDSEG fellowships, and was recently the recipient of the Hertz Foundation doctoral thesis prize. He is broadly interested in using mathematical models of biological systems to improve our understanding of human health and disease.</p>
-  </div>
-</div>
-<br>
-
-          </div>
-          <div class="two columns">
-          </div>
-        </div>
-
-        <div class="row" style="border-bottom: 2px dotted #e5e5e5;">
-          <div class="ten columns">
-            
-
-<br>
-<div class="row">
-  <div class="four columns">
-    <div class="main img" style="float:right;"><img alt="Steinhardt" src="/images/members/steinhardt.jpeg"></div>
-  </div>
-
-  <div class="eight columns">
-    <h5>Jacob Steinhardt</h5>
-    <p id="member">ARTIFICIAL INTELLIGENCE, MACHINE LEARNING</p>
-    <p>Jacob is a graduate student in the Department of Computer Science at Stanford, working on artificial intelligence and natural language processing. He is particularly interested in using machine learning to solve high-dimensional search problems. He received his Bachelor's in mathematics from MIT and is currently supported by a Hertz fellowship and NSF fellowship.</p>
-  </div>
-</div>
-<br>
-          </div>
-          <div class="two columns">
-          </div>
-        </div>
-
-        <div class="row" style="border-bottom: 2px dotted #e5e5e5;">
-          <div class="ten columns">
-            
-<br>
-<div class="row">
-  <div class="four columns">
-    <div class="main img" style="float:right;"><img alt="Wang" src="/images/members/wang.jpg"></div>
-  </div>
-
-  <div class="eight columns">
-    <h5>Jade Wang</h5>    
-    <p id="member">NEUROSCIENCE</p>
-    <p>Jade Wang is Chief Culture Officer at Meteor, an open source web app development platform. She also founded the Chez JJ hacker house collective, and is a mentor for the Thiel 20 Under 20 Fellowship program. As a post doc at NASA Ames Research Center, she researched human factors and usability in aviation. Her neuroscience Ph.D. work at Northwestern, supported by a National Research Service Award Fellowship from the NIH, focused on EEG plasticity in the auditory cortex and the brainstem.</p>
-  </div>
-</div>
-<br>
-
-        <div class="row" style="border-bottom: 2px dotted #e5e5e5;"></div>
-        <br>
-<div class="row">
-  <div class="four columns">
-    <div class="main img" style="float:right;"><img alt="Kaplan" src="/images/members/kaplan.jpg"></div>
-  </div>
-
-  <div class="eight columns">
-    <h5>Jared Kaplan</h5>
-    <p id="member">PHYSICS</p>
-    <p>Jared Kaplan is an assistant professor in the Department of Physics &amp; Astronomy at Johns Hopkins University.  He received his Ph.D. from Harvard University in 2009 with the support of a Hertz Foundation fellowship, and from 2009-2013 he worked as a research associate at SLAC and Stanford University.  He has broad interests in theoretical physics, with a focus on high-energy physics and cosmology.</p>
-  </div>
-</div>
-<br>
-        <div class="row" style="border-bottom: 2px dotted #e5e5e5;"></div>
-        <br>
-<div class="row">
-  <div class="four columns">
-    <div class="main img" style="float:right;"><img alt="Fortney" src="/images/members/fortney.png"></div>
-  </div>
-
-  <div class="eight columns">
-    <h5>Kristen Fortney </h5>
-    <p id="member">BIOINFORMATICS, GENETICS</p>
-    <p>Kristen Fortney is a Postdoctoral Fellow at Stanford University, where she works on the genetics of human aging. She completed a PhD in Bioinformatics at the University of Toronto in 2012. Her research interests lie in applying tools from computational biology to problems in translational medicine, with a focus on aging and age-related disease.</p>
-  </div>
-</div>
-<br>
-          </div>
-          <div class="two columns">
-          </div>
-        </div>
-
-          <div class="ten columns">
-            
-<br>
-          </div>
-          <div class="two columns">
-          </div>
-        </div>
-
-
-        <div class="row" style="border-bottom: 2px dotted #e5e5e5;">
-          <div class="ten columns">
-            
-
-<br>
-<div class="row">
-  <div class="four columns">
-    <div class="main img" style="float:right;"><img alt="Conley" src="/images/members/conley.jpg"></div>
-  </div>
-
-  <div class="eight columns">
-    <h5>Nick Conley</h5>
-    <p id="member">CHEMISTRY, DEVELOPMENTAL BIOLOGY</p>
-    <p>Nick Conley holds a PhD in Chemistry from Stanford University and has completed three years of post-doctoral research in Developmental Biology within the Stanford School of Medicine. He is currently a Principal Research Engineer at HGST, where he applies synthetic organic chemistry to the development of next generation hard disk drive technologies for high-density data storage. He is CTO at LMA Solutions Inc, which develops and licenses innovative consumer dental cleaning products, and is CSO of Create Cosmetics LLC, the world’s first crowdsourced cosmetics company.</p>
-  </div>
-</div>
-<br>
-          </div>
-          <div class="two columns">
-          </div>
-        </div>
-
-
-        <div class="row" style="border-bottom: 2px dotted #e5e5e5;">
-          <div class="ten columns">
-            
-<br>
-<div class="row">
-  <div class="four columns">
-    <div class="main img" style="float:right;"><img alt="Donner" src="/images/members/donner.jpg"></div>
-  </div>
-
-  <div class="eight columns">
-    <h5>Yoni Donner</h5>
-    <p id="member">ARTIFICIAL INTELLIGENCE, MACHINE LEARNING</p>
-    <p>Yoni is a 3rd-year PhD student in the Computer Science department at Stanford. His background is in probabilistic graphical models, machine learning and Bayesian statistics, and he is interested in applying these tools to aging research, particularly age-related cognitive decline. He recently designed a tool called Quantified Mind (www.quantified-mind.com) to enable efficient repeatable measurement of basic measures of cognitive performance.</p>
-  </div>
-</div>
-<br>
-
-          </div>
-          <div class="two columns">
-          </div>
-        </div>
-
-          <div class="row" style="border-bottom: 2px dotted #e5e5e5;">
-          <div class="ten columns">
-            
-
-<br>
-<div class="row">
-  <div class="four columns">
-    <div class="main img" style="float:right;"><img alt="Constantin" src="/images/members/constantin.jpg"></div>
-  </div>
-
-  <div class="eight columns">
-    <h5>Sarah Constantin</h5>
-    <p id="member">MATHEMATICS</p>
-    <p>Sarah Constantin is a PhD student in mathematics at Yale University.  Her research focuses on applied harmonic analysis.  She earned her BA from Princeton in 2010, and is an NSF and DOD fellow. </p>
-  </div>
-</div>
-<br>
-</div>
-          <div class="two columns">
-          </div>
-        </div>
-
-        <div class="row" style="border-bottom: 2px dotted #e5e5e5;">
-          <div class="ten columns">
-            <br>
-<div class="row">
-  <div class="four columns">
-    <div class="main img" style="float:right;"><img alt="Looks" src="/images/members/looks.png"></div>
-  </div>
-
-  <div class="eight columns">
-    <h5>Moshe Looks</h5>
-    <p id="member">ARTIFICIAL INTELLIGENCE, MACHINE LEARNING</p>
-    <p>Moshe Looks has a Ph.D. and M.S. from Washington University and a B.Sc. from Hebrew University. He works at Google Research on probabilistic approaches to learning programs, and artificial intelligence.</p>
-  </div>
-</div>
-<br>
-
-          </div>
-          <div class="two columns">
-          </div>
-        </div>
-
-
-
-          </div>
-          <div class="two columns">
-          </div>
-        </div>
-
-        <div class="row" style="border-bottom: 2px dotted #fff;">
-          <div class="ten columns">
-            
-<br>
-<div class="row">
-  <div class="four columns">
-    <div class="main img" style="float:right;"><img alt="Mallick" src="/images/members/mallick.jpeg"></div>
-  </div>
-
-  <div class="eight columns">
-    <h5>Parag Mallick</h5>
-    <p id="member">PROTEOMICS, SYSTEMS BIOLOGY</p>
-    <p id="memberbio">Parag Mallick graduated from Washington University in St. Louis with a BS in Computer Science. He then obtained his Ph.D. from UCLA in Chemistry &amp; Biochemistry, where he worked with Dr. David Eisenberg. At UCLA he received both an NSF IGERT Fellowship and an NSF Biotechnology fellowship. He completed Post-Doctoral studies at The Institute for Systems Biology, in Seattle, WA with Dr. Ruedi Aebersold. He is now faculty with the Canary Center for Cancer Early Detection at Stanford University where he is developing quantitative multi-scale approaches to accurately describe cellular regulation and dysregulation and to better prioritize potential biomarker candidates. </p>
-  </div>
-</div>
-<br>
-
-          </div>
-          <div class="two columns">
-          </div>
-        </div>
-
-
-
-
-        
-    
-    </div>
+    <hr>
   </div>
 </template>
+
+
+
+<!-- Member Template -->
+<template name="darioamodei">
+  <div class="content">
+    <div class="row" style="border-bottom: 2px dotted #e5e5e5;min-height:250px;">
+      <div class="ten columns">
+        <br>
+          <div class="row">
+            <div class="four columns">
+              <div class="main img" style="float:right;"><img alt="Dario Amodei" src="/images/members/amodei.jpg"></div>
+            </div>
+
+            <div class="eight columns">
+              <h5>Dario Amodei</h5>
+              <p id="member">PROTEOMICS, SYSTEMS BIOLOGY</p>
+              <p id="memberbio">Dario Amodei is a postdoctoral scholar at Stanford Medical School, where he focuses on quantitative proteomics with applications to clinical biomarker discovery.  He received his PhD in biophysics from Princeton University in 2011 with the support of Hertz and NDSEG fellowships, and was recently the recipient of the Hertz Foundation doctoral thesis prize. He is broadly interested in using mathematical models of biological systems to improve our understanding of human health and disease.</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div><br>
+</template>
+<!-- END Member Template -->
+
+
+
+
+<!-- Member Template -->
+<template name="jacobsteinhardt">
+  <div class="content">
+    <div class="row" style="border-bottom: 2px dotted #e5e5e5;min-height:250px;">
+      <div class="ten columns">
+        <br>
+          <div class="row">
+            <div class="four columns">
+              <div class="main img" style="float:right;"><img alt="Jacob Steinhardt" src="/images/members/steinhardt.jpeg"></div>
+            </div>
+
+            <div class="eight columns">
+              <h5>Jacob Steinhardt</h5>
+              <p id="member">ARTIFICIAL INTELLIGENCE, MACHINE LEARNING</p>
+              <p id="memberbio">Jacob is a graduate student in the Department of Computer Science at Stanford, working on artificial intelligence and natural language processing. He is particularly interested in using machine learning to solve high-dimensional search problems. He received his Bachelor's in mathematics from MIT and is currently supported by a Hertz fellowship and NSF fellowship.</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div><br>
+</template>
+<!-- END Member Template -->
+
+
+
+
+<!-- Member Template -->
+<template name="jadewang">
+  <div class="content">
+    <div class="row" style="border-bottom: 2px dotted #e5e5e5;min-height:250px;">
+      <div class="ten columns">
+        <br>
+          <div class="row">
+            <div class="four columns">
+              <div class="main img" style="float:right;"><img alt="Jade Wang" src="/images/members/wang.jpg"></div>
+            </div>
+
+            <div class="eight columns">
+              <h5>Jade Wang</h5>
+              <p id="member">NEUROSCIENCE</p>
+              <p id="memberbio">Jade Wang is Chief Culture Officer at Meteor, an open source web app development platform. She also founded the Chez JJ hacker house collective, and is a mentor for the Thiel 20 Under 20 Fellowship program. As a post doc at NASA Ames Research Center, she researched human factors and usability in aviation. Her neuroscience Ph.D. work at Northwestern, supported by a National Research Service Award Fellowship from the NIH, focused on EEG plasticity in the auditory cortex and the brainstem.</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div><br>
+</template>
+<!-- END Member Template -->
+
+
+
+
+
+
+
+<!-- Member Template -->
+<template name="jaredkaplan">
+  <div class="content">
+    <div class="row" style="border-bottom: 2px dotted #e5e5e5;min-height:250px;">
+      <div class="ten columns">
+        <br>
+          <div class="row">
+            <div class="four columns">
+              <div class="main img" style="float:right;"><img alt="Jared Kaplan" src="/images/members/kaplan.jpg"></div>
+            </div>
+
+            <div class="eight columns">
+              <h5>Jared Kaplan</h5>
+              <p id="member">PHYSICS</p>
+              <p id="memberbio">Jared Kaplan is an assistant professor in the Department of Physics &amp; Astronomy at Johns Hopkins University.  He received his Ph.D. from Harvard University in 2009 with the support of a Hertz Foundation fellowship, and from 2009-2013 he worked as a research associate at SLAC and Stanford University.  He has broad interests in theoretical physics, with a focus on high-energy physics and cosmology.</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div><br>
+</template>
+<!-- END Member Template -->
+
+
+
+      
+
+
+<!-- Member Template -->
+<template name="kristenfortney">
+  <div class="content">
+    <div class="row" style="border-bottom: 2px dotted #e5e5e5;min-height:250px;">
+      <div class="ten columns">
+        <br>
+          <div class="row">
+            <div class="four columns">
+              <div class="main img" style="float:right;"><img alt="Kristen Fortney" src="/images/members/fortney.png"></div>
+            </div>
+
+            <div class="eight columns">
+              <h5>Kristen Fortney </h5>
+              <p id="member">BIOINFORMATICS, GENETICS</p>
+              <p id="memberbio">Kristen Fortney is a Postdoctoral Fellow at Stanford University, where she works on the genetics of human aging. She completed a PhD in Bioinformatics at the University of Toronto in 2012. Her research interests lie in applying tools from computational biology to problems in translational medicine, with a focus on aging and age-related disease.</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div><br>
+</template>
+<!-- END Member Template -->
+
+
+
+
+<!-- Member Template -->
+<template name="nickconley">
+  <div class="content">
+    <div class="row" style="border-bottom: 2px dotted #e5e5e5;min-height:250px;">
+      <div class="ten columns">
+        <br>
+          <div class="row">
+            <div class="four columns">
+              <div class="main img" style="float:right;"><img alt="Nick Conley" src="/images/members/conley.jpg"></div>
+            </div>
+
+            <div class="eight columns">
+              <h5>Nick Conley</h5>
+              <p id="member">CHEMISTRY, DEVELOPMENTAL BIOLOGY</p>
+              <p id="memberbio">Nick Conley holds a PhD in Chemistry from Stanford University and has completed three years of post-doctoral research in Developmental Biology within the Stanford School of Medicine. He is currently a Principal Research Engineer at HGST, where he applies synthetic organic chemistry to the development of next generation hard disk drive technologies for high-density data storage. He is CTO at LMA Solutions Inc, which develops and licenses innovative consumer dental cleaning products, and is CSO of Create Cosmetics LLC, the world’s first crowdsourced cosmetics company.</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div><br>
+</template>
+<!-- END Member Template -->
+
+
+
+
+
+<!-- Member Template -->
+<template name="yonidonner">
+  <div class="content">
+    <div class="row" style="border-bottom: 2px dotted #e5e5e5;min-height:250px;">
+      <div class="ten columns">
+        <br>
+          <div class="row">
+            <div class="four columns">
+              <div class="main img" style="float:right;"><img alt="Yoni Donner" src="/images/members/donner.jpg"></div>
+            </div>
+
+            <div class="eight columns">
+              <h5>Yoni Donner</h5>
+              <p id="member">ARTIFICIAL INTELLIGENCE, MACHINE LEARNING</p>
+              <p id="memberbio">Yoni is a 3rd-year PhD student in the Computer Science department at Stanford. His background is in probabilistic graphical models, machine learning and Bayesian statistics, and he is interested in applying these tools to aging research, particularly age-related cognitive decline. He recently designed a tool called Quantified Mind (www.quantified-mind.com) to enable efficient repeatable measurement of basic measures of cognitive performance.</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div><br>
+</template>
+<!-- END Member Template -->
+
+
+
+
+
+<!-- Member Template -->
+<template name="sarahconstantin">
+  <div class="content">
+    <div class="row" style="border-bottom: 2px dotted #e5e5e5;min-height:250px;">
+      <div class="ten columns">
+        <br>
+          <div class="row">
+            <div class="four columns">
+              <div class="main img" style="float:right;"><img alt="Sarah Constantin" src="/images/members/constantin.jpg"></div>
+            </div>
+
+            <div class="eight columns">
+              <h5>Sarah Constantin</h5>
+              <p id="member">MATHEMATICS</p>
+              <p id="memberbio">Sarah Constantin is a PhD student in mathematics at Yale University.  Her research focuses on applied harmonic analysis.  She earned her BA from Princeton in 2010, and is an NSF and DOD fellow.</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div><br>
+</template>
+<!-- END Member Template -->
+
+
+
+
+
+<!-- Member Template -->
+<template name="moshelooks">
+  <div class="content">
+    <div class="row" style="border-bottom: 2px dotted #e5e5e5;min-height:250px;">
+      <div class="ten columns">
+        <br>
+          <div class="row">
+            <div class="four columns">
+              <div class="main img" style="float:right;"><img alt="Moshe Looks" src="/images/members/looks.png"></div>
+            </div>
+
+            <div class="eight columns">
+              <h5>Moshe Looks</h5>
+              <p id="member">ARTIFICIAL INTELLIGENCE, MACHINE LEARNING</p>
+              <p id="memberbio">Moshe Looks has a Ph.D. and M.S. from Washington University and a B.Sc. from Hebrew University. He works at Google Research on probabilistic approaches to learning programs, and artificial intelligence.</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div><br>
+</template>
+<!-- END Member Template -->
+
+
+
+
+<!-- Member Template -->
+<template name="paragmallick">
+  <div class="content">
+    <div class="row" style="border-bottom: 2px dotted #e5e5e5;min-height:250px;">
+      <div class="ten columns">
+        <br>
+          <div class="row">
+            <div class="four columns">
+              <div class="main img" style="float:right;"><img alt="Parag Mallick" src="/images/members/mallick.jpeg"></div>
+            </div>
+
+            <div class="eight columns">
+              <h5>Parag Mallick</h5>
+              <p id="member">PROTEOMICS, SYSTEMS BIOLOGY</p>
+              <p id="memberbio">Parag Mallick graduated from Washington University in St. Louis with a BS in Computer Science. He then obtained his Ph.D. from UCLA in Chemistry &amp; Biochemistry, where he worked with Dr. David Eisenberg. At UCLA he received both an NSF IGERT Fellowship and an NSF Biotechnology fellowship. He completed Post-Doctoral studies at The Institute for Systems Biology, in Seattle, WA with Dr. Ruedi Aebersold. He is now faculty with the Canary Center for Cancer Early Detection at Stanford University where he is developing quantitative multi-scale approaches to accurately describe cellular regulation and dysregulation and to better prioritize potential biomarker candidates.</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div><br>
+</template>
+<!-- END Member Template -->
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- Footer -->
 <template name="footer">

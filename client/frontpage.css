@@ -2571,9 +2571,11 @@ div.first {
   font-family: 'GillSans', 'Gill Sans', 'Trebuchet MS', sans-serif;
 }
 
-#memberbio p {
-  font-family: sans-serif;
-  font-size:14px;
+.memberbio p {
+  font-size:15px;
+  color:#444;
+  line-height: 20px;
+  letter-spacing: 0.1em;
 }
 
 .main img {
