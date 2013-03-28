@@ -93,7 +93,7 @@
 /* Banner BG */
 .bannerbg {
   background: url(/images/transperantPNG.png); 
-  padding: 15px;
+  padding: 25px;
   min-height: 400px;
 }
 .hero-overlay {

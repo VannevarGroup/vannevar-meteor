@@ -18,7 +18,7 @@
     {{> banner}}
       
       {{> whoweare}}
-
+    <div id="allmembers">
       <!-- Members -->
       {{> darioamodei}}
       {{> jacobsteinhardt}}
@@ -30,6 +30,7 @@
       {{> yonidonner}}
       {{> moshelooks}}
       {{> sarahconstantin}}
+    </div>
       
       
     <!--  END Members-->
@@ -48,8 +49,9 @@
       </div>
       <div class="seven columns" id="headerlinks">
         <div id="vannevarnavbar" style="float:right;">
-        <!-- <a href="/whoweare" style="margin-left:15px;">WHO WE ARE</a> -->
-        <a href="{{contactPath}}">CONTACT</a>
+        <a style="margin-left:15px;" href="#allmembers">WHO WE ARE</a>
+        <a style="margin-left:15px;" href="{{contactPath}}">CONTACT</a>
+        
         </div>
       </div>
 
@@ -66,10 +68,10 @@
   <div style="background: -webkit-linear-gradient(45deg, #000000 0%,#0f0f0f 100%);">
     <div class="hero-unit">
       <div class="hero-overlay">
-        <div class="row" style="padding-top:10px;">
-          <div class="six columns bannerbg">
+        <div class="row" style="padding-top:20px;">
+          <div class="seven columns bannerbg" style="min-height:280px;">
             <p style="color:#fffff3; font-family: 'GillSans', 'Gill Sans', 'Trebuchet MS', sans-serif;font-size:40px;">ACCELERATING SCIENTIFIC PROGRESS</p>
-              <p style="color:#e6e6e6;font-size:16px;">The Vannevar Group is a team of scientists who want to know: what drives scientific progress, and how can we improve scientific institutions to create the greatest amount of social good?</p>
+              <p style="color:#e6e6e6;font-size:18px;">The Vannevar Group is a team of scientists who want to know: what drives scientific progress, and how can we improve scientific institutions to create the greatest amount of social good?</p>
             </div>
           <div class="six columns"></div>
         </div>
@@ -119,8 +121,7 @@
   <div class="row onepage" style="min-height: 300px;" id="aboutus">
         <br>
 
-
-        <h2>Our Mission</h2>
+        <p style="font-size:38px;font-family: 'GillSans', 'Gill Sans', 'Trebuchet MS', sans-serif;">Our Mission</p>
         <p style="font-size:20px;color:#585958;font-family: 'GillSans', 'Gill Sans', 'Trebuchet MS', sans-serif;">Vannevar is a group of scientists dedicated to making scientific research more efficient, collaborative and productive. We were founded by academics who noticed that problems with data and code sharing, inefficiencies in the funding and publishing systems, and other institutional challenges can be just as much a barrier to scientific progress as the technical obstacles we face in the lab.  We are a new organization and are currently in an exploratory mode: getting broad feedback from people in the scientific community on the areas where small changes in institutions and incentives could make big differences. Our long term goal is to idenify ideas, initiatives, and companies that have the potential to revolutize the practice of science, and to connect these initiatives to funders and philanthropists.</p>
 
         <p style="font-size:20px;color:#585958;font-family: 'GillSans', 'Gill Sans', 'Trebuchet MS', sans-serif;">Vannevar is based at Stanford University but welcomes members from across the globe -- currently our membership includes scientists from Stanford, UC Berkeley, Yale, Johns Hopkins, and more.  We are a mix of professors, postdoctoral researchers, graduate students, and former academics, and come from a range of fields including biology, chemistry, machine learning, and physics.  More information on our current core members can be found below. If you'd like to get involved, please sign up to receive updates on our bi-monthly meetings and public talks. </p>
@@ -320,28 +321,7 @@
 
 
 
-<!-- Member Template -->
-<template name="sarahconstantin">
-  <div class="content">
-    <div class="row" style="border-bottom: 2px dotted #e5e5e5;min-height:250px;">
-      <div class="ten columns">
-        <br>
-          <div class="row">
-            <div class="four columns">
-              <div class="main img" style="float:right;"><img alt="Sarah Constantin" src="/images/members/constantin.jpg"></div>
-            </div>
 
-            <div class="eight columns">
-              <h5>Sarah Constantin</h5>
-              <p id="member">MATHEMATICS</p>
-              <p id="memberbio">Sarah Constantin is a PhD student in mathematics at Yale University.  Her research focuses on applied harmonic analysis.  She earned her BA from Princeton in 2010, and is an NSF and DOD fellow.</p>
-            </div>
-          </div>
-      </div>
-    </div>
-  </div><br>
-</template>
-<!-- END Member Template -->
 
 
 
@@ -388,6 +368,31 @@
               <h5>Parag Mallick</h5>
               <p id="member">PROTEOMICS, SYSTEMS BIOLOGY</p>
               <p id="memberbio">Parag Mallick graduated from Washington University in St. Louis with a BS in Computer Science. He then obtained his Ph.D. from UCLA in Chemistry &amp; Biochemistry, where he worked with Dr. David Eisenberg. At UCLA he received both an NSF IGERT Fellowship and an NSF Biotechnology fellowship. He completed Post-Doctoral studies at The Institute for Systems Biology, in Seattle, WA with Dr. Ruedi Aebersold. He is now faculty with the Canary Center for Cancer Early Detection at Stanford University where he is developing quantitative multi-scale approaches to accurately describe cellular regulation and dysregulation and to better prioritize potential biomarker candidates.</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div><br>
+</template>
+<!-- END Member Template -->
+
+
+
+<!-- Member Template -->
+<template name="sarahconstantin">
+  <div class="content">
+    <div class="row" style="border-bottom: 2px dotted #fff;min-height:250px;">
+      <div class="ten columns">
+        <br>
+          <div class="row">
+            <div class="four columns">
+              <div class="main img" style="float:right;"><img alt="Sarah Constantin" src="/images/members/constantin.jpg"></div>
+            </div>
+
+            <div class="eight columns">
+              <h5>Sarah Constantin</h5>
+              <p id="member">MATHEMATICS</p>
+              <p id="memberbio">Sarah Constantin is a PhD student in mathematics at Yale University.  Her research focuses on applied harmonic analysis.  She earned her BA from Princeton in 2010, and is an NSF and DOD fellow.</p>
             </div>
           </div>
       </div>
